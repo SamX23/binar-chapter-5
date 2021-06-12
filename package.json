@@ -1,0 +1,12 @@
+{
+  "name": "binar-chapter-5-sami",
+  "version": "1.0.0",
+  "description": "A web created from binar challenge",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": "https://github.com/SamX23/binar-chapter-5.git",
+  "author": "SamX23 <skalexsong@gmail.com>",
+  "license": "MIT"
+}
