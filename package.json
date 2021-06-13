@@ -8,5 +8,8 @@
   },
   "repository": "https://github.com/SamX23/binar-chapter-5.git",
   "author": "SamX23 <skalexsong@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
