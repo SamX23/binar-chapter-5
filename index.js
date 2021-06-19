@@ -3,23 +3,30 @@ const app = express();
 const router = require("./router");
 const PORT = 3000;
 
-// Application level middleware
 const logger = (req, res, next) => {
   console.log(`${req.method} ${req.url}`);
   next();
 };
+
 app.use(logger);
-
-// Built-in middleware
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-
-// Route level middleware
 app.use(router);
 
-app.get("/games", (req, res) =>
-  res.sendFile(path.join(__dirname + "/index.html"))
-);
+// Internal server error handler
+app.use((err, req, res, next) => {
+  console.error(err);
+  res.status(500).json({
+    status: "fail",
+    errors: err.message,
+  });
+});
+
+// Page not found error handler
+app.use((err, req, res, next) => {
+  req.status(404).json({
+    status: "fail",
+    errors: "Sorry, page not found. :)",
+  });
+});
 
 app.listen(PORT, () =>
   console.log(`This app listening on http://localhost:${PORT}`)
