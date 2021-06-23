@@ -4,12 +4,15 @@
   "description": "A web created from binar challenge",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "repository": "https://github.com/SamX23/binar-chapter-5.git",
   "author": "SamX23 <skalexsong@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
