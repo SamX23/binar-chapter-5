@@ -1,2 +1,6 @@
 # binar-chapter-5
-A slicing from figma template, designed by Binar Academy.
+
+Enhance the html games by using :
+
+- Express JS
+- EJS View Engine
