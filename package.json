@@ -4,8 +4,7 @@
   "description": "A web created from binar challenge",
   "main": "index.js",
   "scripts": {
-    "nodemon": "nodemon index.js",
-    "start": "node ./bin/www"
+    "start": "DEBUG=binar-chapter-5:* nodemon ./bin/www"
   },
   "repository": "https://github.com/SamX23/binar-chapter-5.git",
   "author": "SamX23 <skalexsong@gmail.com>",
