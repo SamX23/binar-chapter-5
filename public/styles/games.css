@@ -132,6 +132,7 @@ nav {
   letter-spacing: 0.1em;
   color: var(--black);
   border-bottom: 0.5rem dashed var(--skin);
+  text-transform: uppercase;
 }
 
 .versus {
