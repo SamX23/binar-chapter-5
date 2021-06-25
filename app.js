@@ -5,6 +5,7 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const indexRouter = require("./routes/index");
 const gamesRouter = require("./routes/games");
+const loginRouter = require("./routes/login");
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/games", gamesRouter);
+app.use("/login", loginRouter);
 
 app.use((req, res, next) => {
   next(createError(404));
