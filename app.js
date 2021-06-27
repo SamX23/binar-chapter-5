@@ -6,6 +6,7 @@ const logger = require("morgan");
 const indexRouter = require("./routes/index");
 const gamesRouter = require("./routes/games");
 const loginRouter = require("./routes/login");
+const api = require("./routes/api");
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/games", gamesRouter);
 app.use("/login", loginRouter);
+app.use("/api", api);
 
 app.use((req, res, next) => {
   next(createError(404));

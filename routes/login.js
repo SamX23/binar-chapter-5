@@ -1,15 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/", function (req, res, next) {
-  const user = req.query.user || null;
-  res.json([
-    {
-      id: 1,
-      user: user,
-      email: "me@kalamallah.xyz",
-    },
-  ]);
-});
+router.get("/", (req, res, next) =>
+  res.render("login", { title: "Login Page" })
+);
 
 module.exports = router;
