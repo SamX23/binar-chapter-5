@@ -33,39 +33,61 @@
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
     <link href="/assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/styles/style.css" rel="stylesheet" />
   </head>
-  <body>
-    <div class="container">
-      <form action="index.ejs">
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label"
-            >Email address</label
-          >
+  <body id="login-form" class="d-flex">
+    <div class="container bg-dark m-auto px-5 py-5 rounded-3">
+      <h1 class="text-white">LOGIN TO PLAY GAMES</h1>
+      <form class="my-5" method="POST" action="/">
+        <div class="row">
+          <label for="name" class="form-label text-white">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            aria-describedby="nameHelp"
+            placeholder="John Doe"
+            required
+          />
+          <div id="nameHelp" class="form-text">Use your real names.</div>
+        </div>
+
+        <div class="row">
+          <label for="email" class="form-label text-white">Email</label>
           <input
             type="email"
             class="form-control"
-            id="exampleInputEmail1"
+            id="email"
+            name="email"
             aria-describedby="emailHelp"
+            placeholder="email@domain.com"
+            required
           />
           <div id="emailHelp" class="form-text">
             We'll never share your email with anyone else.
           </div>
         </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
+
+        <div class="row">
+          <label for="password" class="form-label text-white">Password</label>
           <input
             type="password"
             class="form-control"
-            id="exampleInputPassword1"
+            id="password"
+            name="password"
+            aria-describedby="passwordHelp"
+            placeholder="*******"
+            required
           />
+          <div id="passwordHelp" class="form-text">
+            Use a proper password and easy to remember.
+          </div>
         </div>
-        <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-          <label class="form-check-label" for="exampleCheck1"
-            >Check me out</label
-          >
+
+        <div class="row my-5">
+          <button class="btn btn-primary" type="submit">Login/Sign Up</button>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
   </body>
